@@ -1,0 +1,2 @@
+SELECT SUM(php.cantidad) AS total_bebidas_vendidas FROM pizzeria.productos_has_pedidos php JOIN pizzeria.productos p ON php.productos_id = p.id JOIN pizzeria.pedidos pe ON php.pedidos_id = pe.id JOIN pizzeria.tienda t ON pe.id_tienda = t.id WHERE p.nombre = 'bebida' AND t.localidad = 'Madrid';
+SELECT COUNT(pe.id) AS numero_de_pedidos FROM pizzeria.trabajador t JOIN pizzeria.pedidos pe ON t.id = pe.id_tienda WHERE t.nombre = 'Ana' AND t.apellido1 = 'Martinez';
